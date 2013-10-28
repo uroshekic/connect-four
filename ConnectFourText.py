@@ -1,10 +1,11 @@
 from ConnectFour import ConnectFour
+
 class ConnectFourText(ConnectFour):        
     def current(self):
         print(self.players[self.first_player])
         
     def drop(self, column):
-        parent_drop = super(ConnectFourText, self).drop(column)
+        ConnectFour.drop(self, column)
         print(self)
         if self.game_over != False:
             print('Game has ended.')
